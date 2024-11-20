@@ -1,0 +1,247 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #1f1c2c, #928dab);
+    color: #ffffff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; 
+    background: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    color: white;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffdd59; /* Emas */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #d1d1d1; /* Abu-abu terang */
+    margin: 0 15px;
+    transition: color 0.3s;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #ffdd59; /* Emas */
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('img/ml_ff_background.jpg') no-repeat center center/cover   ;
+    animation: fadeIn 2s ease-in-out;
+    padding: 50px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    color: #ffdd59; /* Emas */
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    color: #f0f0f0; /* Putih lembut */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.hero button {
+    padding: 10px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #ffdd59, #f4c430); /* Gradien emas */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.hero button:hover {
+    background: linear-gradient(90deg, #f4c430, #ffdd59); /* Gradien emas (dibalik) */
+    transform: scale(1.05);
+}
+
+/* Packages Section */
+.packages {
+    padding: 50px 10%;
+    text-align: center;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.packages h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffdd59; /* Emas */
+}
+
+.packages .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.packages .card {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.packages .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8);
+}
+
+.packages .card h3 {
+    color: #ffdd59; /* Emas */
+    font-size: 1.5rem;
+}
+
+.packages .card p {
+    margin: 10px 0;
+    color: #e0e0e0; /* Abu-abu terang */
+}
+
+.packages .card button {
+    background: linear-gradient(90deg, #ffdd59, #f4c430); /* Gradien emas */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.packages .card button:hover {
+    background: linear-gradient(90deg, #f4c430, #ffdd59); /* Gradien emas (dibalik) */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #d1d1d1; /* Abu-abu terang */
+}
+
+footer a {
+    color: #ffdd59; /* Emas */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .packages .card {
+        width: 90%;
+    }
+}
+
+.card-container {
+    display: grid; /* Ubah menjadi grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 3 kolom */
+    gap: 20px; /* Jarak antar elemen */
+    justify-items: center; /* Pusatkan isi kartu */
+}
+.card {
+    width: 100%; /* Pastikan kartu mengikuti ukuran grid */
+    max-width: 250px; /* Batas maksimal lebar kartu */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Gaya Umum untuk Navigasi */
+.nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #070101;
+    font-weight: bold;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+}
+
+/* Gaya untuk Ikon */
+.nav a i {
+    margin-right: 15px; /* Jarak antara ikon dan teks */
+}
+
+/* Responsif untuk Perangkat Mobile */
+@media (max-width: 768px) {
+    /* Sembunyikan teks dan hanya tampilkan ikon */
+    .nav a span {
+        display: none;
+    }
+
+    /* Mengatur ukuran ikon */
+    .nav a i {
+        font-size: 1em; /* Ukuran ikon lebih besar */
+    }
+
+    /* Tampilkan ikon saja tanpa teks */
+    .nav a {
+        justify-content: center;
+        margin: 0 10px;
+    }
+}
+
